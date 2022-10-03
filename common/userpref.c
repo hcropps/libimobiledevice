@@ -372,6 +372,7 @@ static int X509_add_ext_helper(X509 *cert, int nid, char *value)
 	X509V3_set_ctx_nodb(&ctx);
 
 	X509V3_set_ctx(&ctx, NULL, cert, NULL, NULL, 0);
+	#if 0
 	ex = X509V3_EXT_conf_nid(NULL, &ctx, nid, value);
 	if (!ex) {
 		debug_info("ERROR: X509V3_EXT_conf_nid(%d, %s) failed", nid, value);
