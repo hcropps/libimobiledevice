@@ -167,7 +167,7 @@ static void internal_idevice_deinit(void)
 
 	EVP_cleanup();
 	CRYPTO_cleanup_all_ex_data();
-	SSL_COMP_free_compression_methods();
+	//SSL_COMP_free_compression_methods();
 	openssl_remove_thread_state();
 #endif
 #elif defined(HAVE_GNUTLS)
